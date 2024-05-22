@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Quiz</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container hidden" id="content">
+  <div class="question" id="question1">
+    <h2>Question 1:</h2>
+    <p>Who is known as the "Father of Modern Entrepreneurship" ?</p>
+    <input type="radio" name="q1" value="Steve Jobs"> Steve Jobs<br>
+    <input type="radio" name="q1" value="Elon Musk"> Elon Musk<br>
+    <input type="radio" name="q1" value="Peter Drucker"> Peter Drucker<br>
+    <input type="radio" name="q1" value="Richard Branson"> Richard Branson<br>
+  </div>
+
+  <div class="question" id="question2">
+    <h2>Question 2:</h2>
+    <p>What does the term "bootstrapping" refer to in entrepreneurship?</p>
+    <input type="radio" name="q2" value="Receiving initial funding from venture capitalists"> Receiving initial funding from venture capitalists<br>
+    <input type="radio" name="q2" value="Using personal savings and revenues to fund the startup"> Using personal savings and revenues to fund the startup<br>
+    <input type="radio" name="q2" value="Launching a product before it is ready"> Launching a product before it is ready<br>
+    <input type="radio" name="q2" value="Scaling the business rapidly"> Scaling the business rapidly<br>
+  </div>
+
+  <div id="timer">Time Left: <span id="countdown">60</span> seconds</div>
+  <button onclick="submitQuiz()">Submit Quiz</button>
+  <div id="score">Score: 0</div>
+</div>
+
+<!-- Modal -->
+<div id="startModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p>Are you ready to start the quiz?</p>
+    <button onclick="startQuiz()">Start Quiz</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
